@@ -217,6 +217,7 @@ static NSMutableDictionary *sDeleteSQLs;
     } else {
         [NSException raise:[NSString stringWithFormat:@"%@ Error", NSStringFromClass([self class])] format:@"object must be a subclass of EFSQLiteObject"];
     }
+    return nil;
 }
 
 - (NSArray<EFSQLiteObject *> *)getObjectsWithBlock:(EFSQLiteObject* (^)(FMResultSet *resultSet))block query:(NSString *)query, ...
